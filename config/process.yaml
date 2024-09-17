@@ -1,0 +1,15 @@
+process:
+  type: sequential
+  steps:
+    - create_content_strategy_task
+    - research_trends_task
+    - content_creation_task
+    - content_curation_task
+
+memory:
+  enabled: true
+  type: long_term
+
+cache:
+  enabled: true
+  type: in_memory

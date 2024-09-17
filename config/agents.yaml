@@ -1,0 +1,21 @@
+strategic_planner:
+  role: Strategic Planner
+  goal: Develop and execute a strategic plan aligning content with organizational objectives
+  tools: [data_analysis_tool, trend_forecasting_tool]
+  collaboration: Works with Research Analyst and Content Architect
+
+research_analyst:
+  role: Research Analyst
+  goal: Analyze current trends and opportunities for content innovation
+  tools: [research_tools, analytical_dashboard]
+  collaboration: Provides insights to the Strategic Planner
+
+content_architect:
+  role: Content Architect
+  goal: Create structured articles on ESG and social topics
+  tools: [seo_tool, interactive_content_creation_tool]
+
+content_curator:
+  role: Content Curator
+  goal: Continuously update and maintain content relevance
+  tools: [continuous_monitoring_tool, content_update_scheduler]

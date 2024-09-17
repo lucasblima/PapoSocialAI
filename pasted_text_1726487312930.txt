@@ -1,0 +1,112 @@
+Objective: Develop a dynamic platform for the Papo Social Living Encyclopedia, automating the production, maintenance, and updating of articles through artificial intelligence agents powered by João Moura's crewAI technology. The platform will feature a Coordinator Agent responsible for assembling and supervising agent teams, with personalized user interaction and adjustable autonomy settings.
+
+Key Features and Requirements:
+1. Coordinator Agent:
+Purpose: Acts as a supervisor, orchestrating and coordinating the entire workflow, overseeing the team of agents described below.
+Control Panel: The user interacts through a user-friendly control panel with customizable options.
+Autonomy Levels: The user defines whether the Coordinator Agent should request approvals for certain actions or operate autonomously based on the context and the user’s preferences.
+Core Responsibilities:
+
+Assemble teams of specialized AI agents (detailed below) based on task requirements.
+Oversee automations and workflows to ensure smooth execution.
+Ensure quality control by checking that agents follow editorial guidelines and company standards.
+Interact with the user for ongoing instructions, adjustments, or feedback.
+Adjust workflows dynamically based on user input (e.g., when to request manual approval or act independently).
+Notifications and Alerts: Notify the user via the control panel of key actions, such as:
+Approval requests for article completion.
+Progress updates on research and writing stages.
+Alerts for missing or low-quality data requiring user intervention.
+2. Specialized AI Agents:
+The team consists of four AI agents, each with a well-defined role and responsibility:
+
+a. Strategic Planner Agent:
+
+Role: Strategic Planner
+Goal: Develop and execute a strategic plan aligning content with organizational objectives to increase traffic and revenue while fostering social dialogue.
+Backstory: A seasoned strategist in content marketing, focused on creating innovative approaches that stand out and promote constructive dialogue across diverse social groups.
+Tools: Data analysis tool, trend forecasting tool.
+Skills: Strategic thinking, content alignment, innovation.
+Performance Metrics: Increased traffic, revenue growth, engagement metrics.
+Collaboration: Works closely with the Content Architect and Research Analyst to ensure strategy and execution are in sync.
+Constraints: Alignment with organizational goals, meeting deadlines.
+Feedback Loop: Regular strategy reviews with stakeholders to ensure alignment with objectives.
+Execution Mode: Mixed synchronous and asynchronous work.
+b. Research Analyst Agent:
+
+Role: Research Analyst
+Goal: Analyze the current content landscape to identify gaps and opportunities for innovation, focusing on trends, demographics, and audience preferences.
+Backstory: A data-driven analyst providing insights to shape successful content strategies, producing actionable reports that highlight opportunities for growth and innovation.
+Tools: Research tool.
+Skills: Data analysis, trend identification, audience segmentation.
+Performance Metrics: Quality of insights, impact on strategy, report accuracy.
+Collaboration: Works with the Strategic Planner to ensure research aligns with strategic objectives.
+Constraints: Data accuracy, objective analysis.
+Feedback Loop: Regular feedback sessions with the Strategic Planner and Content Architect.
+Execution Mode: Asynchronous, with scheduled reports.
+c. Content Architect Agent:
+
+Role: Content Architect
+Goal: Develop a base of concise articles on ESG and social topics, creating a reference encyclopedia and interactive content to promote user engagement.
+Backstory: Passionate about social issues and content creation, building structured and engaging content that encourages interaction and serves as a reliable reference.
+Tools: SEO tool, interactive content creation tool.
+Skills: Content structuring, SEO, user engagement.
+Performance Metrics: Article completion rate, user engagement, SEO performance.
+Collaboration: Collaborates with the Strategic Planner and Research Analyst to ensure content aligns with strategy.
+Constraints: Content quality, SEO best practices.
+Feedback Loop: Feedback from users on content relevance and engagement.
+Execution Mode: Primarily asynchronous.
+d. Content Curator Agent:
+
+Role: Content Curator
+Goal: Ensure that published content is up-to-date and aligned with current trends through continuous online research.
+Backstory: Expert in identifying content trends and ensuring that articles remain relevant to the target audience.
+Tools: Continuous monitoring tools, content update scheduler.
+Skills: Content curation, trend monitoring, detail orientation.
+Performance Metrics: Content freshness, relevance, timeliness.
+Collaboration: Works with the Content Architect to ensure consistency in content updates.
+Constraints: Content accuracy, timely updates.
+Feedback Loop: Periodic checks with the Content Architect for relevance and consistency.
+Execution Mode: Mixed synchronous and asynchronous work.
+3. Target Audience & Editorial Guidelines:
+Target Audience:
+
+Corporate decision-makers involved in carbon credits, ESG, and community development.
+Marketing professionals focused on sustainability initiatives in large companies.
+Specific Editorial Guidelines:
+
+The tone must be professional, persuasive, and focused on conversion (turning readers into clients).
+The content should highlight the benefits of Papo Social services, using data and success stories relevant to the audience.
+Use a structure with compelling introductions, clear subheadings, and strong conclusions.
+4. Workflow & Supervision:
+Human Intervention:
+
+The user defines, via the control panel, at which stages they wish to review or approve tasks (e.g., research, writing, final review).
+The user can also adjust the level of autonomy for the Coordinator Agent, enabling or disabling automatic approvals for each stage of the article creation.
+Failure Handling:
+
+If an agent (Research, Writing, or Review) fails to complete a task due to missing or incomplete information, the Coordinator Agent must alert the user, explaining the failure and requesting further instructions.
+The platform should have fallback options, such as notifying the user when external data sources are unavailable or if the Research Agent encounters unreliable sources.
+5. Notifications:
+Type: All important notifications (e.g., task completion, agent failure, approval requests) will be displayed in the control panel.
+Customization: The user can customize which notifications they wish to receive, adjusting the level of information based on task complexity and agent autonomy.
+6. Defined Tasks:
+Research Task:
+
+Description: Research the given topic and collect relevant information.
+Expected Output: A list of reliable sources and a summary of key information on the topic.
+Agent: Research Analyst Agent.
+Content Strategy Task:
+
+Description: Develop a content strategy that focuses on increasing traffic, aligning with organizational goals, and fostering dialogue.
+Expected Output: A detailed strategic plan document outlining the content calendar, target demographics, key content pillars, and trend forecasts.
+Agent: Strategic Planner Agent.
+Article Creation Task:
+
+Description: Write an article based on the strategy and research provided.
+Expected Output: A well-structured article ready for publication.
+Agent: Content Architect Agent.
+Content Review Task:
+
+Description: Ensure that all articles are up-to-date and aligned with the current content strategy.
+Expected Output: Updated articles that reflect current trends and remain relevant to the audience.
+Agent: Content Curator Agent.

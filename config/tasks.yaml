@@ -1,0 +1,19 @@
+create_content_strategy_task:
+  description: Create a strategic content plan to align with organizational goals
+  agent: strategic_planner
+  expected_output: A detailed strategy document
+
+research_trends_task:
+  description: Analyze trends in sustainability and social development topics
+  agent: research_analyst
+  expected_output: A research report summarizing trends and opportunities
+
+content_creation_task:
+  description: Write an article based on the strategy and research provided
+  agent: content_architect
+  expected_output: A well-structured article ready for publication
+
+content_curation_task:
+  description: Review and update existing content to maintain relevance
+  agent: content_curator
+  expected_output: Updated and curated content

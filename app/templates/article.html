@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ article.title }}</h1>
+<p>Status: {{ article.status }}</p>
+<div id="article-content">
+    {{ article.content | safe }}
+</div>
+<button id="edit-article">Edit Article</button>
+<button id="generate-content">Generate Content</button>
+
+<h2>Agent Tasks</h2>
+<ul id="agent-tasks">
+    <!-- Tasks will be loaded dynamically using JavaScript -->
+</ul>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const articleId = {{ article.id }};
+    const agentTasksList = document.getElementById('agent-tasks');
+
+    // Load agent tasks
+    fetch(`/api/article/${articleId}/tasks`)
+        .then(response => response.json())
+        .then(tasks => {
+            tasks.forEach(task => {
+                const li = document.createElement('li');
+                li.textContent = `${task.agent_type}: ${task.task_description} (Status: ${task.status})`;
+                agentTasksList.appendChild(li);
+            });
+        });
+
+    // Edit article functionality
+    document.getElementById('edit-article').addEventListener('click', () => {
+        const newContent = prompt('Enter new content for the article:', '{{ article.content }}');
+        if (newContent !== null) {
+            fetch(`/api/article/${articleId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ content: newContent }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                location.reload();
+            });
+        }
+    });
+
+    // Generate content functionality
+    document.getElementById('generate-content').addEventListener('click', () => {
+        fetch(`/api/article/${articleId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ status: 'generating' }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Content generation started. Please refresh the page in a few moments to see updates.');
+        });
+    });
+});
+</script>
+{% endblock %}

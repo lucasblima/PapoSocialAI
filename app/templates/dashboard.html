@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Dashboard</h1>
+
+<h2>CrewAI Team</h2>
+<div class="crew-ai-team">
+    {% for agent_role, agent in agents.items() %}
+    <div class="agent-card">
+        <h3>{{ agent_role }}</h3>
+        <p><strong>Goal:</strong> {{ agent.goal }}</p>
+        <p><strong>Backstory:</strong> {{ agent.backstory }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<h2>Interact with AI Agents</h2>
+<div id="agent-interaction">
+    <textarea id="user-input" rows="4" cols="50" placeholder="Enter your instructions or questions for the agents here..."></textarea>
+    <button id="send-input">Send to Agents</button>
+    <div id="agent-response">
+        <h3>Agent Responses:</h3>
+        <div id="response-content"></div>
+    </div>
+</div>
+
+<h2>Articles</h2>
+<ul id="article-list">
+    {% for article in articles %}
+    <li>
+        <a href="{{ url_for('main.article', id=article.id) }}">{{ article.title }}</a>
+        (Status: {{ article.status }})
+        <button class="delete-article" data-id="{{ article.id }}">Delete</button>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
